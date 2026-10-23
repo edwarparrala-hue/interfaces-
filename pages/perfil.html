@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBRATECH — Mi Perfil</title>
+  <link rel="icon" href="../img/logo.jpeg">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/auth.js"></script>
+</head>
+<body class="page-wrapper">
+
+  <header class="header">
+    <div class="header__inner">
+      <span class="logo">OBRA<span>TECH</span></span>
+      <nav class="header__nav">
+        <a href="menu.html"><span>← Menú</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <div class="container">
+      <section class="card">
+        <p class="card__eyebrow">Cuenta</p>
+        <h1 class="card__title">Mi Perfil</h1>
+        <p class="card__subtitle">Edita tus datos de cuenta</p>
+        <p id="mensaje"></p>
+        <form id="form-perfil" onsubmit="guardarPerfil(event)">
+          <div class="form-group">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="ej. Juan Pérez" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" class="form-control" readonly>
+            <span class="form-hint">El usuario no se puede cambiar</span>
+          </div>
+          <div class="form-group">
+            <label for="nueva-pass">Nueva Contraseña</label>
+            <input type="password" id="nueva-pass" name="nueva-pass" class="form-control" placeholder="Dejar en blanco para no cambiar" autocomplete="new-password">
+            <span class="form-hint">Dejar en blanco para no cambiar</span>
+          </div>
+          <div class="form-group">
+            <label for="confirmar-pass">Confirmar Nueva Contraseña</label>
+            <input type="password" id="confirmar-pass" name="confirmar-pass" class="form-control" placeholder="••••••••" autocomplete="new-password">
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+          </div>
+        </form>
+
+        <div class="divider"></div>
+        <div class="links-row">
+          <a href="menu.html" class="back-link">Volver al menú</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    exigirSesion('auth/login.html');
+    cargarPerfil();
+  </script>
+
+  <footer class="footer">
+    <p>OBRATECH — Calculadora de Materiales para Construcción</p>
+  </footer>
+
+</body>
+</html>

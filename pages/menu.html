@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBRATECH — Menú Principal</title>
+  <link rel="icon" href="../img/logo.jpeg">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/auth.js"></script>
+</head>
+<body class="page-wrapper">
+
+  <header class="header">
+    <div class="header__inner">
+      <span class="logo">OBRA<span>TECH</span></span>
+      <nav class="header__nav">
+        <a href="perfil.html">👤 <span>Mi Perfil</span></a>
+        <a href="auth/login.html" class="logout-link" onclick="salir()">Salir ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="page-header__inner">
+      <div>
+        <h1 class="page-header__title">Menú Principal</h1>
+        <p class="page-header__sub">Hola, <span id="nombre-usuario"></span>. Elige el material a calcular</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-main">
+    <div class="container--wide">
+      <ul class="menu-grid">
+        <li>
+          <a href="calculadoras/muro.html" class="menu-card">
+            <span class="menu-card__num">01</span>
+            <span class="menu-card__icon" aria-hidden="true">🧱</span>
+            <span class="menu-card__label">Muro de ladrillo</span>
+            <span class="menu-card__arrow" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="calculadoras/viga.html" class="menu-card">
+            <span class="menu-card__num">02</span>
+            <span class="menu-card__icon" aria-hidden="true">📐</span>
+            <span class="menu-card__label">Viga de hormigón</span>
+            <span class="menu-card__arrow" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="calculadoras/columnas.html" class="menu-card">
+            <span class="menu-card__num">03</span>
+            <span class="menu-card__icon" aria-hidden="true">🏛</span>
+            <span class="menu-card__label">Columnas de hormigón</span>
+            <span class="menu-card__arrow" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="calculadoras/contrapiso.html" class="menu-card">
+            <span class="menu-card__num">04</span>
+            <span class="menu-card__icon" aria-hidden="true">🪨</span>
+            <span class="menu-card__label">Contrapisos</span>
+            <span class="menu-card__arrow" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="calculadoras/techo.html" class="menu-card">
+            <span class="menu-card__num">05</span>
+            <span class="menu-card__icon" aria-hidden="true">🏠</span>
+            <span class="menu-card__label">Techo</span>
+            <span class="menu-card__arrow" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="calculadoras/pisos.html" class="menu-card">
+            <span class="menu-card__num">06</span>
+            <span class="menu-card__icon" aria-hidden="true">⬜</span>
+            <span class="menu-card__label">Pisos</span>
+            <span class="menu-card__arrow" aria-hidden="true">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="calculadoras/pintura.html" class="menu-card">
+            <span class="menu-card__num">07</span>
+            <span class="menu-card__icon" aria-hidden="true">🖌</span>
+            <span class="menu-card__label">Pintura</span>
+            <span class="menu-card__arrow" aria-hidden="true">›</span>
+          </a>
+        </li>
+      </ul>
+      <div class="menu-footer">
+        <a href="auth/login.html" class="btn btn-ghost" onclick="salir()">8 — Salir de la sesión</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    exigirSesion('auth/login.html');
+    mostrarSaludo();
+  </script>
+
+  <footer class="footer">
+    <p>OBRATECH — Calculadora de Materiales para Construcción</p>
+  </footer>
+
+</body>
+</html>

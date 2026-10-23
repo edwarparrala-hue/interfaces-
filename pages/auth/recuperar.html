@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBRATECH — Recuperar Contraseña</title>
+  <link rel="icon" href="../../img/logo.jpeg">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/auth.js"></script>
+</head>
+<body class="page-wrapper">
+
+  <header class="header">
+    <div class="header__inner">
+      <span class="logo">OBRA<span>TECH</span></span>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <div class="container">
+      <section class="card">
+        <p class="card__eyebrow">Recuperar acceso</p>
+        <h1 class="card__title">Olvidé mi Contraseña</h1>
+        <p class="card__subtitle">Ingresa tu usuario y elige una contraseña nueva.</p>
+        <p id="mensaje"></p>
+        <form onsubmit="recuperarClave(event)">
+          <div class="form-group">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" class="form-control" placeholder="ej. jperez" autocomplete="username" required>
+          </div>
+          <div class="form-group">
+            <label for="nueva">Nueva Contraseña</label>
+            <input type="password" id="nueva" name="nueva" class="form-control" placeholder="••••••••" autocomplete="new-password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirmar">Confirmar Nueva Contraseña</label>
+            <input type="password" id="confirmar" name="confirmar" class="form-control" placeholder="••••••••" autocomplete="new-password" required>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Cambiar Contraseña</button>
+          </div>
+        </form>
+
+        <div class="divider"></div>
+        <div class="links-row">
+          <a href="login.html" class="link link--muted">Volver a inicio de sesión</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>OBRATECH — Calculadora de Materiales para Construcción</p>
+  </footer>
+
+</body>
+</html>

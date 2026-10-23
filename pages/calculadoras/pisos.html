@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBRATECH — Calcular Pisos</title>
+  <link rel="icon" href="../../img/logo.jpeg">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/auth.js"></script>
+  <script src="../../js/calculos.js"></script>
+</head>
+<body class="page-wrapper">
+
+  <header class="header">
+    <div class="header__inner">
+      <span class="logo">OBRA<span>TECH</span></span>
+      <nav class="header__nav">
+        <a href="../menu.html"><span>← Menú</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="page-header__inner">
+      <div>
+        <h1 class="page-header__title">Calcular Pisos</h1>
+        <p class="page-header__sub">Revestimiento de piso</p>
+      </div>
+      <span class="page-header__icon" aria-hidden="true">⬜</span>
+    </div>
+  </section>
+
+  <main class="page-main">
+    <div class="container--wide calc-layout">
+
+      <section class="calc-panel">
+        <span class="calc-panel__tag">Parámetros</span>
+        <h2 class="calc-panel__title">Pisos</h2>
+        <p class="calc-panel__sub">Ingresa ancho y largo del paño de piso</p>
+        <p id="mensaje"></p>
+        <form onsubmit="calcular(event, 'pisos')">
+          <div class="form-group">
+            <label for="ancho">Ancho (m)</label>
+            <input type="number" id="ancho" name="ancho" class="form-control" placeholder="ej. 3" min="0.01" step="0.01" required>
+          </div>
+          <div class="form-group">
+            <label for="largo">Largo (m)</label>
+            <input type="number" id="largo" name="largo" class="form-control" placeholder="ej. 6" min="0.01" step="0.01" required>
+          </div>
+          <button type="submit" class="btn btn-calc">Calcular</button>
+        </form>
+      </section>
+
+      <section class="calc-panel">
+        <span class="calc-panel__tag">Resultado</span>
+        <h2 class="calc-panel__title">Materiales Necesarios</h2>
+        <p class="calc-panel__sub">Incluye 10% extra por recortes</p>
+        <div class="result">
+          <h3 class="result__title">Resultado</h3>
+          <ul class="result__list" id="resultados">
+            <li class="result-item result-item--vacio">Ingresa los datos y presiona Calcular.</li>
+          </ul>
+        </div>
+        <a href="../menu.html" class="back-link">Volver al menú</a>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    exigirSesion('../auth/login.html');
+  </script>
+
+  <footer class="footer">
+    <p>OBRATECH — Calculadora de Materiales para Construcción</p>
+  </footer>
+
+</body>
+</html>

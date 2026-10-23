@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBRATECH — Inicio de Sesión</title>
+  <link rel="icon" href="../../img/logo.jpeg">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/auth.js"></script>
+</head>
+<body class="page-wrapper">
+
+  <header class="header">
+    <div class="header__inner">
+      <span class="logo">OBRA<span>TECH</span></span>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <div class="container">
+      <section class="card">
+        <p class="card__eyebrow">Bienvenido</p>
+        <h1 class="card__title">Inicio de Sesión</h1>
+        <p class="card__subtitle">Accede con tu cuenta de obra</p>
+        <p id="mensaje"></p>
+        <form onsubmit="iniciarSesion(event)">
+          <div class="form-group">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" class="form-control" placeholder="ej. jperez" autocomplete="username" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" autocomplete="current-password" required>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+          </div>
+        </form>
+
+        <div class="divider"></div>
+        <div class="links-row">
+          <a href="registro.html" class="link">Crear cuenta</a>
+          <a href="recuperar.html" class="link link--muted">Recuperar contraseña</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>OBRATECH — Calculadora de Materiales para Construcción</p>
+  </footer>
+
+</body>
+</html>
